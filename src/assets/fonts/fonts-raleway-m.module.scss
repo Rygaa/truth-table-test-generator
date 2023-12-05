@@ -1,0 +1,105 @@
+@mixin Raleway-M {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin Raleway-M1 {
+  font-size: 3.125rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M2 {
+  font-size: 2.9688rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M3 {
+  font-size: 2.8125rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M4 {
+  font-size: 2.6563rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M5 {
+  font-size: 2.5rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M6 {
+  font-size: 2.3438rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M7 {
+  font-size: 2.1875rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M8 {
+  font-size: 2.0313rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M9 {
+  font-size: 1.875rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M10 {
+  font-size: 1.7188rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M11 {
+  font-size: 1.5625rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M12 {
+  font-size: 1.4063rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M13 {
+  font-size: 1.25rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M14 {
+  font-size: 1.0938rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M15 {
+  font-size: 0.9375rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M16 {
+  font-size: 0.7813rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M17 {
+  font-size: 0.625rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M18 {
+  font-size: 0.4688rem;
+  @include Raleway-M();
+}
+
+@mixin Raleway-M19 {
+  font-size: 0.3125rem;
+  @include Raleway-M();
+}

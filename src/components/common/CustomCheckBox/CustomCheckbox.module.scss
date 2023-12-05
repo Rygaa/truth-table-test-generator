@@ -1,0 +1,28 @@
+@import "/src/assets/fonts/fonts.module.scss";
+
+.checkbox-container {
+  display: flex;
+  column-gap: 1rem;
+  cursor: pointer;
+  
+  .checked {
+    border: 1px solid var(--border-2);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unchecked {
+    background-color: 1px solid var(--background);
+    border: 1px solid var(--border-2);
+    width: 20px;
+    height: 20px;
+  }
+
+  .label {
+    @include Roboto-M15();
+    user-select: none;
+  }
+}

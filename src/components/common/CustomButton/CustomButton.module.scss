@@ -1,0 +1,145 @@
+@import "/src/assets/fonts/fonts.module.scss";
+
+$btn-sizes: (
+  "xs": (
+    min-width: 100px,
+    width: 100px,
+    min-height: 50px,
+    margin: 0.25rem 0rem,
+    font-size: 12px,
+  ),
+  "s": (
+    min-width: 175px,
+    width: 150px,
+    min-height: 40px,
+    margin: 0.25rem 0rem,
+    font-size: 14px,
+  ),
+  "m": (
+    min-width: 200px,
+    width: 200px,
+    min-height: 40px,
+    margin: 0.25rem 0rem,
+    font-size: 16px,
+  ),
+  "l": (
+    min-width: 250px,
+    width: 250px,
+    min-height: 50px,
+    margin: 0.25rem 0rem,
+    font-size: 18px,
+  ),
+  "xl": (
+    min-width: 300px,
+    width: 300px,
+    min-height: 50px,
+    margin: 0.25rem 0rem,
+    font-size: 20px,
+  ),
+);
+
+.btn {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 1rem;
+  border-radius: 2.5px;
+
+  .text {
+    @include Roboto-B15();
+    color: var(--background);
+  }
+  svg {
+    padding-left: 1rem;
+  }
+}
+
+@each $name, $size in $btn-sizes {
+  .btn-#{$name} {
+    min-width: map-get($size, min-width);
+    width: map-get($size, min-width);
+    min-height: map-get($size, min-height);
+    font-size: map-get($size, font-size);
+    margin: map-get($size, margin);
+    p {
+      // padding-right: 2rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+}
+
+@each $name, $size in $btn-sizes {
+  .btn-#{$name}-no-icon {
+    min-width: map-get($size, min-width) - 60px;
+    width: map-get($size, min-width) - 60px;
+    min-height: map-get($size, min-height);
+    font-size: map-get($size, font-size);
+    margin: map-get($size, margin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.icon-container {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+$button-types: "primary", "secondary", "warning", "danger", "shadow";
+
+@each $type in $button-types {
+  .#{$type} {
+    background: var(--button-#{$type});
+
+    .text {
+      color: var(--text-light-1);
+    }
+   
+  }
+}
+
+.expand {
+  min-width: unset;
+  width: 100%;
+}
+
+@each $type in $button-types {
+  .disableColor-#{$type} {
+    background: transparent;
+    .text {
+      color: var(--text-dark-1);
+    }
+  }
+}
+
+// .shadow {
+//   background: var(--button-shadow);
+//   border-right: 1px solid var(--border-2);
+
+//   .text {
+//     color: var(--text-dark-3);
+//   }
+//   svg path {
+//     fill: var(--text-dark-3);
+//   }
+
+//   &:hover {
+//     border-right: 1px solid var(--border-5);
+
+//     .text {
+//       color: var(--text-dark-2);
+//     }
+//     svg path {
+//       fill: var(--text-dark-2);
+//     }
+//   }
+// }

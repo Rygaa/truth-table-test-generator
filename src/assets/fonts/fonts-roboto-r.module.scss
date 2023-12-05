@@ -1,0 +1,107 @@
+@mixin Roboto-R {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin Roboto-R1 {
+  font-size: 3.125rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R2 {
+  font-size: 2.9688rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R3 {
+  font-size: 2.8125rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R4 {
+  font-size: 2.6563rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R5 {
+  font-size: 2.5rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R6 {
+  font-size: 2.3438rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R7 {
+  font-size: 2.1875rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R8 {
+  font-size: 2.0313rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R9 {
+  font-size: 1.875rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R10 {
+  font-size: 1.7188rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R11 {
+  font-size: 1.5625rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R12 {
+  font-size: 1.4063rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R13 {
+  font-size: 1.25rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R14 {
+  font-size: 1.0938rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R15 {
+  font-size: 0.9375rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R16 {
+  font-size: 0.7813rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R17 {
+  font-size: 0.625rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R18 {
+  font-size: 0.4688rem;
+  @include Roboto-R();
+}
+
+@mixin Roboto-R19 {
+  font-size: 0.3125rem;
+  @include Roboto-R();
+}

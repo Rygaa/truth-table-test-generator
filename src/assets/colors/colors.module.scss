@@ -1,0 +1,120 @@
+$light-palette: (
+  "primary": #49dba6,
+  "primary-light": #66a3ff,
+  "primary-dark": #0056b3,
+
+  "secondary": #e9f7fe,
+  "secondary-light": #f7f7f7,
+  "secondary-dark": #bdd8ea,
+
+  "background": #ffffff,
+  "text-primary": #1e1e1e,
+  "text-secondary": #7a7a7a,
+  "text-secondary-light": #f5f5f5,
+  "text-link": #1acfa2,
+
+  "border-1": rgba(#000, 0.1),
+  "border-2": rgba(#000, 0.15),
+  "border-3": rgba(#000, 0.2),
+  "border-4": rgba(#000, 0.25),
+  "border-5": rgba(#000, 0.3),
+  "text-light-1": rgba(255, 255, 255, 1),
+  "text-light-2": rgba(255, 255, 255, 0.85),
+  "text-light-3": rgba(255, 255, 255, 0.7),
+  "text-light-4": rgba(255, 255, 255, 0.5),
+  "text-dark-1": rgba(0, 0, 0, 1),
+  "text-dark-2": rgba(0, 0, 0, 0.85),
+  "text-dark-3": rgba(0, 0, 0, 0.7),
+  "text-dark-4": rgba(0, 0, 0, 0.5),
+  // "button-primary": #498ddb,
+  "button-primary": #49dba6,
+  "button-secondary": #28a745,
+  "button-warning": #ffc107,
+  "button-danger": #dc3545,
+  // "button-shadow": rgb(227, 240, 228),
+  // "button-shadow": #239e71,
+  "button-shadow": #49dba6,
+
+);
+
+$dark-palette: (
+  "primary": #007bff,
+  "primary-light": #66a3ff,
+  "primary-dark": #0056b3,
+
+  "secondary": #285e8e,
+  "secondary-light": #337ab7,
+  "secondary-dark": #214763,
+
+  "background": #333333,
+  "text-primary": #ffffff,
+  "text-secondary": #bbbbbb,
+  "text-link": #66a3ff,
+
+  "border": #444444,
+
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+);
+
+$light-box-shadows: (
+  "shadow-1": 0px 0px 5px 0px rgba(0, 0, 0, 0.15),
+  "shadow-2": 0 2px 4px rgba(0, 0, 0, 0.16),
+  "shadow-3": 0 3px 6px rgba(0, 0, 0, 0.15),
+  "shadow-4": 0 4px 8px rgba(0, 0, 0, 0.12),
+  "shadow-5": 0 0px 20px 0px rgba(0, 0, 0, 0.1),
+);
+
+$dark-box-shadows: (
+  "shadow-1": 0 2px 5px rgba(0, 0, 0, 0.5),
+  "shadow-2": 0 3px 6px rgba(0, 0, 0, 0.6),
+  "shadow-3": 0 4px 8px rgba(0, 0, 0, 0.7),
+  "shadow-4": 0 5px 10px rgba(0, 0, 0, 0.75),
+  "shadow-5": 0 6px 12px rgba(0, 0, 0, 0.8),
+);
+
+@function hover-color($color) {
+  @return lighten($color, 10%);
+}
+
+@function focus-color($color) {
+  @return lighten($color, 20%);
+}
+
+@function hover-border-color($color) {
+  @return darken($color, 10%);
+}
+
+@function focus-border-color($color) {
+  @return darken($color, 20%);
+}
+
+:root {
+  @each $name, $color in $light-palette {
+    --#{$name}: #{$color};
+    --#{$name}-hover: #{hover-color($color)};
+    --#{$name}-focus: #{focus-color($color)};
+    --#{$name}-border-hover: #{hover-border-color($color)};
+    --#{$name}-border-focus: #{focus-border-color($color)};
+  }
+  @each $name, $shadow in $light-box-shadows {
+    --#{$name}: #{$shadow};
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @each $name, $color in $dark-palette {
+      --#{$name}: #{$color};
+      --#{$name}-hover: #{hover-color($color)};
+      --#{$name}-focus: #{focus-color($color)};
+      --#{$name}-border-hover: #{hover-border-color($color)};
+      --#{$name}-border-focus: #{focus-border-color($color)};
+    }
+    @each $name, $shadow in $dark-box-shadows {
+      --#{$name}: #{$shadow};
+    }
+  }
+}

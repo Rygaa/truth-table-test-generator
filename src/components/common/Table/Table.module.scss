@@ -1,0 +1,87 @@
+@import "/src/assets/fonts/fonts.module.scss";
+
+.vlist {
+  overflow: unset !important;
+  contain: unset !important;
+  height: unset !important;
+}
+
+.headerCell {
+  flex: 1;
+  // padding: 10px;
+  padding: 0rem 0.75rem;
+  // background-color: #f0f0f0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid rgba(black, 10%);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+  // padding: 10px;
+  // padding: 0rem 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  background-color: white; // This is to make sure the first cell doesn't become transparent
+}
+
+.stickyColumn {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 75;
+}
+
+.table2 {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  p {
+    @include Roboto-B15();
+
+    position: sticky;
+    left: 0;
+    z-index: 100002;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    top: 0;
+    height: 2.5rem;
+  }
+}
+
+.xxx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 3.5rem;
+}
+
+.sortableColumnContainer {
+  top: 0;
+  position: sticky;
+  z-index: 100002;
+  background-color: white;
+}
+
+.table-big-container {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  width: 100%;
+  height: 100%;
+}

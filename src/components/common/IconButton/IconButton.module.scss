@@ -1,0 +1,58 @@
+.button-icon {
+  padding: 0.5rem;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  $x: 2;
+  $p: 0.5rem;
+
+  &--xs svg {
+    width: calc(10px * $x - calc($p * 2));
+    height: calc(10px * $x - calc($p * 2));
+  }
+
+  &--s svg {
+    width: calc(15px * $x - calc($p * 2));
+    height: calc(15px * $x - calc($p * 2));
+  }
+
+  &--m svg {
+    width: calc(20px * $x - calc($p * 2));
+    height: calc(20px * $x - calc($p * 2));
+  }
+
+  &--l svg {
+    width: calc(25px * $x - calc($p * 2));
+    height: calc(25px * $x - calc($p * 2));
+  }
+
+  &--xl svg {
+    width: calc(30px * $x - calc($p * 2));
+    height: calc(30px * $x - calc($p * 2));
+  }
+
+  &--xxl svg {
+    width: calc(40px * $x - calc($p * 2));
+    height: calc(40px * $x - calc($p * 2));
+  }
+}
+
+.button-icon-hovarable {
+  svg path {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  &:hover {
+    svg path {
+      opacity: 1;
+    }
+  }
+}
+
+.button-icon-hovared {
+  svg path {
+    opacity: 1;
+  }
+}

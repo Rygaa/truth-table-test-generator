@@ -1,0 +1,16 @@
+@import "/src/assets/fonts/fonts.module.scss";
+
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.alignItemsCenter {
+  align-items: center;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}

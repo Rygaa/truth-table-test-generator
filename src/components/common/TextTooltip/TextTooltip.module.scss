@@ -1,0 +1,30 @@
+@import "/src/assets/fonts/fonts.module.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  p {
+    overflow: hidden;
+   white-space: nowrap;
+  }
+  // width: 5rem;
+  // .edit-input {
+  //   background-color: white;
+  //   padding: 0.5rem 0.75rem;
+  //   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  //   border-radius: 2.5px;
+  //   box-sizing: border-box;
+
+  //   span {
+  //     @include Roboto-B15();
+  //     color: rgba(0, 0, 0, 0.95);
+  //     display: block;
+  //     white-space: nowrap;
+  //     overflow: hidden;
+  //     text-overflow: ellipsis;
+  //   }
+  // }
+
+  // Other elements in the container could have additional styles.
+}
